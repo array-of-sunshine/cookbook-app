@@ -1,7 +1,6 @@
 class Api::RecipesController < ApplicationController
-  def one_recipe_action
-    # how can i get some data from my db into my controller?
-    @recipe = Recipe.first
-    render "one_recipe_view.json.jbuilder"
+  def index
+    @recipes = Recipe.all
+    render "index.json.jbuilder"
   end
 end
