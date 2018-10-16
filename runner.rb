@@ -13,6 +13,11 @@ require 'awesome_print'
 # ap response.body
 
 # create
-response = Unirest.post("localhost:3000/api/recipes")
+# response = Unirest.post("localhost:3000/api/recipes")
+
+# ap response.body
+
+# update
+response = Unirest.patch("localhost:3000/api/recipes/4")
 
 ap response.body
