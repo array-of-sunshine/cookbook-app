@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     # index
     get '/recipes' => 'recipes#index'
+    # show
+    get '/recipes/:id' => 'recipes#show'
   end
 end
