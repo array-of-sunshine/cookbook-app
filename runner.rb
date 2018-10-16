@@ -11,3 +11,8 @@ require 'awesome_print'
 # response = Unirest.get("http://localhost:3000/api/recipes/2")
 
 # ap response.body
+
+# create
+response = Unirest.post("localhost:3000/api/recipes")
+
+ap response.body
