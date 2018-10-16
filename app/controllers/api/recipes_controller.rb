@@ -24,12 +24,19 @@ class Api::RecipesController < ApplicationController
     recipe_id = params[:id]
     @recipe = Recipe.find_by(id: recipe_id)
     # change that recipe ==> kind of like create
-    @recipe.title = "new something title"
-    @recipe.chef = "chef spaghetti"
-    @recipe.ingredients = "water, flour, eggs"
-    @recipe.directions = "cook the flour with the eggs"
-    @recipe.prep_time = 10
+    @recipe.title = params[:input_title] || @recipe.title
+    @recipe.chef = params[:input_chef] || @recipe.chef
+    @recipe.ingredients = params[:input_ingredients] || @recipe.ingredients
+    @recipe.directions = params[:input_directions] || @recipe.directions
+    @recipe.prep_time = params[:input_prep_time] || @recipe.prep_time
     @recipe.save
+    # @recipe.update(
+    #   title: params[:input_title],
+    #   chef: params[:input_chef],
+    #   ingredients: params[:input_ingredients],
+    #   directions: params[:input_directions],
+    #   prep_time: params[:input_prep_time]
+    # )
     render "show.json.jbuilder"
   end
 end
