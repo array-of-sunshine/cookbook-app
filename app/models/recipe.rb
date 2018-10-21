@@ -21,7 +21,7 @@ class Recipe < ApplicationRecord
     # if hours > 0
     #   result += "#{hours} hours "
     # end
-    result += "#{hours} hours" if hours > 0
+    result += "#{hours} hours " if hours > 0
     # if minutes > 0
     #   result += "#{minutes} minutes"
     # end
