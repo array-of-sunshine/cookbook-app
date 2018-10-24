@@ -12,5 +12,7 @@ Rails.application.routes.draw do
     patch '/recipes/:id' => 'recipes#update'
     # destroy
     delete '/recipes/:id' => 'recipes#destroy'
+
+    post '/users' => 'users#create'
   end
 end
