@@ -1,5 +1,7 @@
 class Api::RecipesController < ApplicationController
   def index
+    p 'current_user'
+    p current_user
     # show all the recipes
     # how ca n iget user input into my controller?
     search_term = params[:user_input]
