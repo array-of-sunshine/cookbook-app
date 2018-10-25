@@ -1,4 +1,5 @@
 class Recipe < ApplicationRecord
+  belongs_to :user
   # def say_hello
   #   p "hi here"
   # end

@@ -19,7 +19,15 @@ class Api::RecipesController < ApplicationController
 
   def create
     # make a new recipe
-    @recipe = Recipe.new(chef: params[:input_chef], ingredients: params[:input_ingredients], directions: params[:input_directions], title: params[:input_directions], prep_time: params[:input_prep_time])
+    @recipe = Recipe.new(
+      chef: params[:input_chef],
+      ingredients: params[:input_ingredients],
+      directions: params[:input_directions],
+      title: params[:input_directions],
+      prep_time: params[:input_prep_time],
+      user_id: current_user.id
+      # make it so that the logged in user is associated with this new recipe
+    )
     @recipe.save
     render "show.json.jbuilder"
   end
