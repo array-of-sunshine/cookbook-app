@@ -14,13 +14,12 @@ class Api::RecipesController < ApplicationController
     # show one specific recipe
     recipe_id = params[:id]
     @recipe = Recipe.find_by(id: recipe_id)
-    render "show.json.jbuilder"
+    # render "show.json.jbuilder"
   end
 
   def create
     # make a new recipe
     @recipe = Recipe.new(
-      chef: params[:input_chef],
       ingredients: params[:input_ingredients],
       directions: params[:input_directions],
       title: params[:input_directions],

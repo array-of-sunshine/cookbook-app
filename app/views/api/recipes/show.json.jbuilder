@@ -1,5 +1,4 @@
 json.id @recipe.id
-json.chef @recipe.chef
 json.title @recipe.title
 json.prep_time @recipe.prep_time
 json.ingredients @recipe.ingredients
