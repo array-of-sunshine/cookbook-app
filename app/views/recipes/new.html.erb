@@ -3,5 +3,15 @@
 <form action="/recipes" method="post">
   <p>enter the recipe name<input type="text" name="title"></p>
   <p>enter the recipe ingredients<input type="text" name="ingredients"></p>
+
+  <select name="user_id">
+    <!-- <option value="1">bob</option>
+    <option value="2">sam</option>
+    <option value="3">pat</option>
+    <option value="4">jessica</option> -->
+    <% @users.each do |user| %>
+      <option value="<%= user.id %>"><%= user.name %></option>
+    <% end %>
+  </select>
   <input type="submit">
 </form>

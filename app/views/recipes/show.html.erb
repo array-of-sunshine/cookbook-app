@@ -10,3 +10,5 @@
 <p>prep time: <%= @recipe.prep_time %></p>
 <p>image_url: <%= @recipe.image_url %></p>
 <img src="<%= @recipe.image_url %>">
+
+<a href="/recipes/<%= @recipe.id %>" data-method="delete" rel="nofollow">Delete the recipe</a>

@@ -37,7 +37,6 @@ class Api::RecipesController < ApplicationController
     @recipe = Recipe.find_by(id: recipe_id)
     # change that recipe ==> kind of like create
     @recipe.title = params[:input_title] || @recipe.title
-    @recipe.chef = params[:input_chef] || @recipe.chef
     @recipe.ingredients = params[:input_ingredients] || @recipe.ingredients
     @recipe.directions = params[:input_directions] || @recipe.directions
     @recipe.prep_time = params[:input_prep_time] || @recipe.prep_time
