@@ -1,0 +1,12 @@
+<h1>Here are all the recipes</h1>
+
+
+<% @recipes.each do |recipe| %>
+  <h3>title: <%= recipe.title %></h3>
+  <p>ingredients: <%= recipe.ingredients %></p>
+  <p>directions: <%= recipe.directions %></p>
+  <p>prep time: <%= recipe.prep_time %></p>
+  <p>image_url: <%= recipe.image_url %></p>
+  <img src="<%= recipe.image_url %>">
+  <hr>
+<% end %>
