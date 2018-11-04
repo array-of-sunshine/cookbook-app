@@ -1,0 +1,12 @@
+<h2>Here is the information for one product</h2>
+
+<!-- go to the index page -->
+<a href="/recipes">what the user sees</a>
+
+<p><%= @recipe.id %></p>
+<h3>title: <%= @recipe.title %></h3>
+<p>ingredients: <%= @recipe.ingredients %></p>
+<p>directions: <%= @recipe.directions %></p>
+<p>prep time: <%= @recipe.prep_time %></p>
+<p>image_url: <%= @recipe.image_url %></p>
+<img src="<%= @recipe.image_url %>">
