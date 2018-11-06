@@ -24,7 +24,8 @@ class RecipesController < ApplicationController
       user_id: 1
     )
     @recipe.save
-    redirect_to "/recipes"
+    # redirect_to "/recipes/<%=@recipe.id %>"
+    redirect_to "/recipes/#{@recipe.id}"
   end
 
   def edit
