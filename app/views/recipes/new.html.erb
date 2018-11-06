@@ -1,6 +1,7 @@
 <h3>here is the form</h3>
 
-<form action="/recipes" method="post">
+<%= form_tag "/recipes", method: :post do %>
+<!-- <form action="/recipes" method="post"> -->
   <p>enter the recipe name<input type="text" name="title"></p>
   <p>enter the recipe ingredients<input type="text" name="ingredients"></p>
 
@@ -14,4 +15,5 @@
     <% end %>
   </select>
   <input type="submit" value="Make a new recipe">
-</form>
+<!-- </form> -->
+<% end %>
