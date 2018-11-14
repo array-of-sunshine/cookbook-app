@@ -5,7 +5,7 @@ class Api::RecipesController < ApplicationController
     # show all the recipes
     # how ca n iget user input into my controller?
     search_term = params[:user_input]
-    @recipes = Recipe.where('chef LIKE ?', "%#{search_term}%")
+    @recipes = Recipe.all
     @recipes.order!(:id => :desc)
     render "index.json.jbuilder"
   end
