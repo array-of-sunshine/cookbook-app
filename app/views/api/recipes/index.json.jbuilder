@@ -3,6 +3,7 @@ json.array! @recipes do |recipe|
   json.title recipe.title
   json.prep_time recipe.prep_time
   json.ingredients recipe.ingredients
+  json.image_url recipe.image_url
   json.directions recipe.directions
   json.created_at recipe.created_at
   json.updated_at recipe.updated_at
